@@ -17,11 +17,14 @@ Instructions:
 
 # TODO: Create the datasets - up to you to fill in the data
 temperatures = [15, 14, 12, 16, 17, 18, 15]
-city_population = {"LA": 4000000, "Amsterdam": 1000000, "London": 10000000, "Paris": 2040000, "Berlin": 3900000}
+city_population = {"LA": 4100000, "Amsterdam": 1000000, "London": 10000000, "Paris": 2040000, "Berlin": 3900000}
 
 # TODO: Compute aggregates
 average_temperature = sum(temperatures) / len(temperatures)
 largest_city, largest_population = max(
+    city_population.items(), key=lambda item: item[1]
+)
+smallest_city, smallest_population = min(
     city_population.items(), key=lambda item: item[1]
 )
 total_population = sum(city_population.values())
@@ -29,4 +32,5 @@ total_population = sum(city_population.values())
 # TODO: Print results
 print("Average temperature:", average_temperature)
 print("Largest city:", largest_city, "-", largest_population)
+print("Smallest city:", smallest_city, "-", smallest_population)
 print("Total population:", total_population)
