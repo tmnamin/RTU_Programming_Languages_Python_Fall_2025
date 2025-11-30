@@ -16,7 +16,7 @@ Instructions:
 """
 
 # TODO: Create the datasets - up to you to fill in the data
-temperatures = []
+temperatures = [9]
 city_population = {}
 
 # TODO: Compute aggregates
